@@ -1,4 +1,5 @@
 #import "ShowcaseFilterViewController.h"
+#import "TestFilter.h"
 
 @implementation ShowcaseFilterViewController
 
@@ -60,14 +61,14 @@
     {
         case GPUIMAGE_SEPIA:
         {
-            self.title = @"Sepia Tone";
+            self.title = @"Test Filter";
             self.filterSettingsSlider.hidden = NO;
 
             [self.filterSettingsSlider setValue:1.0];
             [self.filterSettingsSlider setMinimumValue:0.0];
             [self.filterSettingsSlider setMaximumValue:1.0];
             
-            filter = [[GPUImageSepiaFilter alloc] init];
+            filter = [[TestFilter alloc] init];
         }; break;
         case GPUIMAGE_PIXELLATE:
         {
